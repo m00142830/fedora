@@ -1,7 +1,5 @@
-FROM ubuntu:22.04
-RUN apt update && apt install  openssh-server sudo -y
-# FROM fedora:latest
-# RUN dnf -y install openssh-server git
+FROM fedora:latest
+RUN dnf -y install openssh-server git
 
 # setup openssh
 RUN sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config
